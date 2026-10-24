@@ -1,0 +1,226 @@
+/* 1. Basic settings for the whole page */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #243247;
+  line-height: 1.7;
+}
+
+/* 2. Header and navigation */
+header {
+  background-color: #142b4a;
+  color: white;
+  text-align: center;
+  padding: 45px 20px 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  color: #d8e2ee;
+  margin: 10px 0 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #29486c;
+}
+
+/* 3. Main content */
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 35px auto;
+}
+
+/* 4. Individual sections */
+section {
+  background-color: white;
+  padding: 28px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(20, 43, 74, 0.06);
+  scroll-margin-top: 20px;
+}
+
+section h2 {
+  color: #142b4a;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #15966b;
+  padding-bottom: 8px;
+}
+
+/* 5. Skills layout using Flexbox */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+#skills li {
+  background-color: #e6f3ed;
+  color: #176b50;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+/* 6. Projects layout using CSS Grid */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#projects h2 {
+  grid-column: 1 / -1;
+}
+
+#projects article {
+  background-color: #f5f7fa;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #15966b;
+}
+
+#projects article h3 {
+  margin-top: 0;
+  color: #142b4a;
+}
+
+/* 7. Contact links */
+#contact a {
+  color: #137a59;
+  overflow-wrap: anywhere;
+}
+
+#contact a:hover {
+  color: #0b513a;
+}
+
+/* 8. Footer */
+footer {
+  background-color: #142b4a;
+  color: #d8e2ee;
+  text-align: center;
+  padding: 18px;
+}
+
+/* 9. Responsive layout for mobile screens */
+@media (max-width: 600px) {
+  header {
+    padding: 32px 15px 24px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+  }
+
+  main {
+    width: 92%;
+    margin: 20px auto;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  #projects {
+    grid-template-columns: 1fr;
+  }
+
+  #projects h2 {
+    grid-column: auto;
+  }
+}
+
+#projects article h3 i {
+  color: #000000;
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+#skills li i {
+  margin-right: 8px;
+  font-size: 1.1em;
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+
+/* Icons beside project names */
+#projects article h3 i {
+    color: #000000;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+/* Icons beside skill names */
+#skills li i {
+    margin-right: 8px;
+    font-size: 1.1em;
+    color: #000000;
+}
+
+
+
+/* Responsive skills layout */
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+/* Individual skill cards */
+#skills li {
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
