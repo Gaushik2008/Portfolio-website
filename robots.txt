@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gaushik2008.github.io/Portfolio-website/sitemap.xml
